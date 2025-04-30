@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_inherited_widget/simple_state.dart';
 
 class CounterInheritedWidget extends InheritedWidget {
-  // parameter
-  final int count;
+  final SimpleStateState stateWidget;
   const CounterInheritedWidget({
     super.key,
     //  default parameter
     required super.child,
-    required this.count,
+    required this.stateWidget
   });
 
   @override
@@ -16,8 +16,10 @@ class CounterInheritedWidget extends InheritedWidget {
   }
 
   // this will return count
-  static int of(BuildContext context) =>
+  static SimpleStateState of(BuildContext context) =>
       context
-          .dependOnInheritedWidgetOfExactType<CounterInheritedWidget>()!
-          .count;
+          .dependOnInheritedWidgetOfExactType<CounterInheritedWidget>()!.stateWidget;
+
 }
+
+

@@ -7,7 +7,7 @@ class CounterScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final value = CounterInheritedWidget.of(context);
+    final value = CounterInheritedWidget.of(context).counter;
     return Scaffold(
       appBar: AppBar(title: Text("Counter App")),
       body: Center(

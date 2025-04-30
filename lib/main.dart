@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_inherited_widget/counter_screen.dart';
+import 'package:flutter_inherited_widget/simple_state.dart';
 
 import 'inherited_widget.dart';
 
@@ -12,8 +13,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CounterInheritedWidget(
-      count: 2,
+    return SimpleState(
       child: MaterialApp(
         home: CounterScreen(),
       ),
