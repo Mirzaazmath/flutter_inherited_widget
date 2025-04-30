@@ -7,6 +7,7 @@ class CounterScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("Hello");
     final value = CounterInheritedWidget.of(context).counter;
     return Scaffold(
       appBar: AppBar(title: Text("Counter App")),
@@ -14,7 +15,9 @@ class CounterScreen extends StatelessWidget {
         child: Text(value.toString(), style: Theme.of(context).textTheme.displayLarge),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: (){
+          CounterInheritedWidget.of(context).incrementCounter();
+        },
         child: Icon(Icons.add),
       ),
     );
